@@ -1,0 +1,16 @@
+[
+    {
+        "Creator": "Adrian Cojocaru",
+        "Description": "Returns all Windows devices that have Adobe Shocwave installed.",
+        "AzureADGroupId": "8360a7d9-1dbd-4150-adf2-a6dca2e88735",
+        "AzureADGroupName": "[VulnMgmt] Remove Adobe Shocwave",
+        "AdvancedHuntingQuery": "DeviceTvmSoftwareEvidenceBeta | where SoftwareName == \"shockwave_player\"  | join (DeviceInfo | where MachineGroup in~ (\"WS Users & Workstations\" , \"WS Unrestricted Internet Access\") and DeviceType == \"Workstation\") on DeviceId | summarize any(DeviceId, DeviceName, LoggedOnUsers, SensorHealthState, RegistryDeviceTag, DeviceManualTags, DeviceDynamicTags) by AadDeviceId"
+    },
+    {
+        "Creator": "Adrian Cojocaru",
+        "Description": "Returns all Windows devices that have Git installed.",
+        "AzureADGroupId": "2893cffc-fe82-4d81-a81e-2ed9c8362c8b",
+        "AzureADGroupName": "[VulnMgmt] - Update Git",
+        "AdvancedHuntingQuery": "DeviceTvmSoftwareEvidenceBeta | where SoftwareVendor == \"git-scm\"  | join (DeviceInfo | where MachineGroup in~ (\"WS Users & Workstations\" , \"WS Unrestricted Internet Access\") and DeviceType == \"Workstation\") on DeviceId | summarize any(DeviceId, DeviceName, LoggedOnUsers, SensorHealthState, RegistryDeviceTag, DeviceManualTags, DeviceDynamicTags) by AadDeviceId"
+    }
+]
