@@ -4,7 +4,7 @@
 
 .DATE 02-Jul-2023
 
-.AUTHOR adrian.cojocaru@gmail.com
+.AUTHOR adrian.cojocaru
 
 #>
 

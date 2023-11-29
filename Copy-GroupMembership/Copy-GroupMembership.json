@@ -1,0 +1,18 @@
+[
+    {
+		"Creator":"Adrian Cojocaru",
+		"Description":"Copy group members from groups GroupName1 to group DestinationGroupName.",
+        "SourceAzureADGroupIds":"4be1e852-f6bb-4810-beb8-d96978516928",
+        "SourceAzureADGroupNames":"GroupName1",
+        "DestinationAzureADGroupId":"3ab6e913-478a-41e3-89b1-3e3c9930935c",
+        "DestinationAzureADGroupName":"DestinationGroupName"
+    },
+	{
+		"Creator":"Adrian Cojocaru",
+		"Description":"Copy group members from groups SourceGroupName1 and SourceGroupName2 to group DestinationGroupName.",
+        "SourceAzureADGroupIds":"62e3b5f7-c994-4916-b5d4-e84f50dcd3b0,a4a749b1-a962-477a-b360-6cb19f55dbae",
+        "SourceAzureADGroupNames":"SourceGroupName1,SourceGroupName2",
+        "DestinationAzureADGroupId":"89a9c485-de45-4567-9f07-df36e640d9fe",
+        "DestinationAzureADGroupName":"DestinationGroupName"
+    }
+]
