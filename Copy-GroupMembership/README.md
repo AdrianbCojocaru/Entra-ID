@@ -11,9 +11,9 @@ When new groups are added, only this file will change.
 Initially developed for Intune's EPM component removal.
 
 ## Required Permissions
-Microsoft Graph (2) 
-GroupMember.ReadWrite.All  
-User.Read.All  
+Microsoft Graph (2)  
+    GroupMember.ReadWrite.All  
+    User.Read.All  
 
 ## Components
 Automation Account
