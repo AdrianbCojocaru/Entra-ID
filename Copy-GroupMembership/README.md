@@ -16,10 +16,10 @@ Microsoft Graph (2)
     User.Read.All  
 
 ## Components
-Automation Account
-Runbook
-App registration
-Storage container
+Automation Account  
+Runbook  
+App registration  
+Storage container  
 
 ## Data Flow Diagram
 
