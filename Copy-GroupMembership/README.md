@@ -22,7 +22,7 @@ App registration
 Storage container  
 
 ## Data Flow Diagram
-
+![alt text](https://github.com/AdrianbCojocaru/Entra-ID/tree/main/Copy-GroupMembership/Diagram.drawio.png "Copy-EntraIDGroupMembership")
 
 ## Data Flow Description
 | Step name     | Associated description |
