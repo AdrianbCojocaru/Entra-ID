@@ -12,7 +12,7 @@
   .SYNOPSIS
   Updates AzureAD group membership based on Microsoft 365 Defender advanced hunting queries.
   .DESCRIPTION
-  The scrip is designed to run in a PowerShell Runbook using either certificate or App Id & Secret authentication.
+  The script is designed to run in a PowerShell Runbook using either certificate or App Id & Secret authentication.
   An external *.json file stored on blob storage contains the AzureAD group Id & Name to be updated and also the coresponding Advanced Hunting query for Microsoft 365 Defender.
   This script reads the Json file and for each section it will update the AzureAD group membershipp with devices returned from the query.
   The advanced hunting query MUST return the AadDeviceId of each device.
