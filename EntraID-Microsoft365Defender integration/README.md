@@ -4,15 +4,17 @@
 Update Azure Active Directory (Entra ID) group membership automatically based on Microsoft 365 Defender (Defender XDR) advanced hunting queries.
 
 # Description
-This script is designed to run in a PowerShell Runbook using either certificate or App Id & Secret authentication.
-The Advanced Hunting Query needs to return the AadDeviceId property for each device. The Azure AD Device Id is used to identify the device in Microsoft Graph.
-An external *.json file stored on blob storage. This file is used to specify the group that is being updated and the coresponding Advanced Hunting for Microsoft 365 Defender.
-This script reads the Json file and for each section it will update the AzureAD group membershipp with devices returned by the query.
+This script is designed to run in a PowerShell Runbook using either certificate or App Id & Secret authentication.  
+The Advanced Hunting Query needs to return the AadDeviceId property for each device. The Azure AD Device Id is used to identify the device in Microsoft Graph.  
+An external *.json file stored on blob storage. This file is used to specify the group that is being updated and the coresponding Advanced Hunting for Microsoft 365 Defender.  
+This script reads the Json file and for each section it will update the AzureAD group membershipp with devices returned by the query.  
 
 ## Required Permissions
 Microsoft Graph (2)  
     GroupMember.ReadWrite.All  
-    User.Read.All  
+    Device.Read.All  
+Microsoft Threat Protection (1)  
+    AdvancedHunting.Read.All  
 
 ## Components
 Automation Account  
@@ -63,5 +65,5 @@ Storage container
 ```
 
 ## Config.json notes
-**AzureADGroupId** has to match the **AzureADGroupName**. If they don't match, the current section in the *.json file will be skipped.
+**AzureADGroupId** has to match the **AzureADGroupName**. If they don't match, the current section in the *.json file will be skipped.  
 The **AdvancedHuntingQuery** needs to return the **AadDeviceId**. The Azure AD Device Id is used to identify the device in Microsoft Graph.

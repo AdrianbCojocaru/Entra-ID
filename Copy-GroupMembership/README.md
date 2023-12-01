@@ -28,7 +28,7 @@ Storage container
 | Step name     | Associated description |
 | ------------- | ---------------------- |
 | 1. Certificate-based authentication | A certificate is added to the automation account certificate store. This certificate is used to authenticate with Microsoft Graph and Microsoft Threat Protection on the behalf of the  application. |
-| 2. Access Tokens | The OAuth 2.0 tokens will be received for Microsoft Graph and Threat Protection. |
+| 2. Access Tokens | The OAuth 2.0 tokens will be received for Microsoft Graph. |
 | 3. REST API call to blob storage | A SAS token, stored as and encrypted variable insinde an automation account, is used to retrieve the config file. This file is *.json based and contains the configuration for the AAD groups that will be updated. |
 | 4. Get Configuration file | The configuration file is being returned and processed. |
 | 5. Rest API calls to Microsoft Entra ID | Multiple REST API calls using the Microsoft Graph token will be performed to validate the groups defined in the configuration file, get devices for each user part of the source (user) groups and update the membership of the destination (device) groups. |
