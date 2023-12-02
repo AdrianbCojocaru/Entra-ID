@@ -1,0 +1,38 @@
+[
+    {
+		"Creator":"Adrian Cojocaru",
+		"Description":"Updating [Test] Adrian Cojocaru - All devices device group with devices of users from Adrian Cojocaru - All user group.",
+        "UserAzureADGroupId":"2df067c4-017b-4046-ad4c-57503004c3f6",
+        "UserAzureADGroupName":"[Test] Adrian Cojocaru - All user",
+        "DeviceAzureADGroupId":"ae94beae-77db-4f81-9703-2655af629ad6",
+        "DeviceAzureADGroupName":"[Test] Adrian Cojocaru - All devices",
+		"OSList":"Windows",
+		"TrustTypeList":"",
+		"isCompliant":"Yes,No",
+		"accountEnabled":"Yes"
+    },
+	{
+		"Creator":"Adrian Cojocaru",
+		"Description":"Updating [Test] DWC Team Test - All devices device group with devices belonging to users from [VulnMgmt] DWC Team - All users user group.",
+        "UserAzureADGroupId":"f7e9ec0b-0aae-438d-b417-8a0fc16c4dce",
+        "UserAzureADGroupName":"[VulnMgmt] DWC Team - All users",
+        "DeviceAzureADGroupId":"dc214f95-f575-4363-ae38-8fb0e6afc186",
+        "DeviceAzureADGroupName":"[Test] DWC Team Test - All devices",
+		"OSList":"Windows,MacOS",
+		"TrustTypeList":"AzureAd,ServerAd,Workplace",
+		"isCompliant":"",
+		"accountEnabled":""
+    },
+	{
+		"Creator":"Adrian Cojocaru",
+		"Description":"Used for EPM.Updating [EPM] [Devices] PRD IGA device group with devices belonging to users from PRD IGA user group.",
+        "UserAzureADGroupId":"09d65d73-8dfa-4f93-937e-92ccb3b239bb",
+        "UserAzureADGroupName":"PRD IGA",
+        "DeviceAzureADGroupId":"93e1874a-fd5f-47c3-832f-d609b25878e8",
+        "DeviceAzureADGroupName":"[EPM] [Devices] PRD IGA",
+		"OSList":"Windows",
+		"TrustTypeList":"",
+		"isCompliant":"",
+		"accountEnabled":""
+    }
+]
