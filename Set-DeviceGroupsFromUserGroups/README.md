@@ -101,9 +101,11 @@ Storage container
 
 ## Config.json notes
 **UserAzureADGroupId** has to match the **UserAzureADGroupName** and **DeviceAzureADGroupId** has to match the **DeviceAzureADGroupName**. If they don't match, the current section in the *.json file will be skipped.  
+
 **OSList** is used to select only devices with a certain OS. Accepts multiple values separated by comma.  
 Valid values: Windows,MacOS,IPhone,IPad,Android.  
 If this property is left empty, then it will default to all the valid values.  
+
 **TrustTypeList** is the equivalent of the **Join type** property from the UI for a certain device. Accepts multiple values separated by comma.  
 Valid values: AzureAd,ServerAd,Workplace.  
 If this property is left empty, then it will default to all the valid values.  
