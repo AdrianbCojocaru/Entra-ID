@@ -10,13 +10,13 @@
 
 <#
   .SYNOPSIS
-  Updates an the membership of destination (device) Azure AD device groups based of a membership of source (user) groups.
+  Updates an the membership of an Azure AD device groups (destination) with devices owned by members of a user group (source).
 
   .DESCRIPTION
-  Name and AzureAD Object IDs for the device & user group are defined inside teh configuration file (JSON format). See Set-DeviceGroupsFromUserGroups.json
+  Name and AzureAD Object IDs for the device & user group are defined inside the configuration file (JSON format). See Set-DeviceGroupsFromUserGroups.json
   The script will first check if the Id matches the name of each group (safeguard).
   Then the membership of the DeviceAzureADGroupId will be updated with the devices owned by users in UserAzureADGroupId.
-  The scipt gets all tthe devices in the destination (devcies) group and all the devices owned by all users in the source (user) group.
+  The scipt gets all the devices in the destination (devcies) group and all the devices owned by all users in the source (user) group.
   Then it updates the destination group with the difference.
   e.g if a user is added to the UserAzureADGroupId then the script will add their devices to the DeviceAzureADGroupId
   if a user is removed from the UserAzureADGroupId then the script will remove their devices from the DeviceAzureADGroupId
@@ -697,6 +697,7 @@ try {
     $Token_Graph = Get-Token
 
     $JsonObjects | ForEach-Object {
+        $DateTimeBefore = Get-Date								  
         Write-LogRunbook "--------------------------------------------------------------------------------" -Caller "JsonEntry $CurrentJsonObject"
         #        Write-LogRunbook "Processing AzureAD Group: '$($_.AzureADGroupName)' Id: '$($_.AzureADGroupId)'" -Caller "JsonEntry $CurrentJsonObject"
         if ((Test-AADGroup -GroupId $_.UserAzureADGroupId -GroupName $_.UserAzureADGroupName) -and
@@ -771,6 +772,8 @@ try {
 
         }
         $CurrentJsonObject++
+        $ElapsedTime = New-TimeSpan -Start $DateTimeBefore -End (Get-Date)
+        Write-Output "Elapsed time (seconds): $($ElapsedTime.TotalSeconds)"																		  
     }
 }
 catch {

@@ -622,6 +622,7 @@ try {
         #        Write-LogRunbook "Processing AzureAD Group: '$($_.AzureADGroupName)' Id: '$($_.AzureADGroupId)'" -Caller "JsonEntry $CurrentJsonObject"
         if (Test-AADGroup -GroupId $_.AzureADGroupId -GroupName $_.AzureADGroupName) {
             try {
+                $DateTimeBefore = Get-Date										  
                 $DefenderDevices = Get-DefenderDevices -Query $_.AdvancedHuntingQuery
                 # $DefenderDevices.Results | Where-Object { $_.AadDeviceId -ne '' } | Select-Object DeviceId, AadDeviceId, DeviceName, OSPlatform, OSBuild | Out-String | Write-LogRunbook -Caller 'Get-DevicesCurrentQuery'
                 if ([string]::IsNullOrEmpty(( $DefenderDevices.Results))) {
@@ -672,6 +673,8 @@ try {
                     # try-catch jump to here if required to avoid err
                     Write-Output "Group: '$($_.AzureADGroupName)' Id: $($_.AzureADGroupId) Member count before: $CurrentMemberCount Devices added: $($ObjToBeAdded.count) Devices removed: $($ObjToBeRemoved.count)"
                 }
+                $ElapsedTime = New-TimeSpan -Start $DateTimeBefore -End (Get-Date)
+                Write-Output "Elapsed time (seconds): $($ElapsedTime.TotalSeconds)"																				  
             }
             catch [CustomQueryException] {
                 Write-LogRunbook "$($_.AdvancedHuntingQuery) Query results unusable. Skipped."  -Caller 'Invalid-Results'

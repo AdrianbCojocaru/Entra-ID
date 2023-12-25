@@ -460,6 +460,7 @@ try {
     $Token_Graph = Get-Token
     
     $JsonObjects | ForEach-Object {
+		$DateTimeBefore = Get-Date						  
         $CurrentJsonObjectplusone = $CurrentJsonObject + 1
         Write-LogRunbook "--------------------------------------------------------------------------------" -Caller "JsonEntry $CurrentJsonObjectplusone"
         $SourceAzureADGroupIds = $JsonObjects[$CurrentJsonObject].SourceAzureADGroupIds.split(',')
@@ -489,6 +490,8 @@ try {
             Write-Output "The provided Group id '$($_.DestinationAzureADGroupId)' does not match the provided group name '$($_.DestinationAzureADGroupName)' in AAD. Check the log file for more details."
         }
         $CurrentJsonObject++
+        $ElapsedTime = New-TimeSpan -Start $DateTimeBefore -End (Get-Date)
+        Write-Output "Elapsed time (seconds): $($ElapsedTime.TotalSeconds)"																		  
     }
 }
 catch {
