@@ -10,7 +10,7 @@
 
 <#
   .SYNOPSIS
-  Updates AzureAD group membership based on Microsoft 365 Defender advanced hunting queries.
+  Updates Entra ID (AzureAD) group membership based on Microsoft 365 Defender advanced hunting queries.
   .DESCRIPTION
   The script is designed to run in a PowerShell Runbook using either certificate or App Id & Secret authentication.
   An external *.json file stored on blob storage contains the AzureAD group Id & Name to be updated and also the coresponding Advanced Hunting query for Microsoft 365 Defender.
