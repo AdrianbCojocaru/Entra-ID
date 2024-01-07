@@ -323,6 +323,7 @@ try {
     "====================================================================" | Write-LogRunbook -Caller 'Info-Start'
     "======================= ScriptVersion: $Scriptversion =======================" | Write-LogRunbook -Caller 'Info-Start'
 
+    #$Token_Graph = Get-Token
     #$Token_Graph = Get-Token -AppIdSecret
     #######################
     #######################
