@@ -9,6 +9,7 @@
 #>
 
 <#
+
   .SYNOPSIS
   Template for scripts meant to run inside Azure Runbooks. 
   It uses the Verbose stream for logging and therefore it is recommended that the runbook has 'Log verbose records' switched on.
