@@ -16,7 +16,7 @@
 
   .DESCRIPTION
   Detailed description.
-  Purpose. Project. Dependencies. Limitations
+  Purpose. Project. Dependencies. Limitations.
 
   .PARAMETER Param1
   Description for Param1
