@@ -4,7 +4,7 @@
 
 .DATE 24-Nov-2023
 
-.AUTHOR adrian.cojocaru
+.AUTHOR adrian
 
 #>
 
