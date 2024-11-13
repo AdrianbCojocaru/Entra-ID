@@ -17,7 +17,7 @@
   Members will never be removed from the destination group even if they are removed from the source group(s).
   Uses a JSON configuration file stored on blob storage that defines the source & target groups.  
   When new groups are added, only this file will change. 
-  Initially developed for Intune's EPM component removal
+  Initially developed for Intune's EPM component removal.
   App registration permissions:
   Microsoft Graph (2)
     GroupMember.ReadWrite.All
