@@ -42,7 +42,7 @@ Storage container
         "Description":"Copy group members from groups GroupName1 to group DestinationGroupName.",
         "SourceAzureADGroupIds":"4be1e852-f6bb-4810-beb8-d96978516928",
         "SourceAzureADGroupNames":"GroupName1",
-        "DestinationAzureADGroupId":"3ab6e913-478a-41e3-89b1-3e3c9930935c",
+        "DestinationAzureADGroupId":"3ab6e913-478a-41e3-89b1-3e3c9930535c",
         "DestinationAzureADGroupName":"DestinationGroupName"
     },
     {
