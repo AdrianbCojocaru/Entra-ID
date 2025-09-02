@@ -38,7 +38,7 @@
   .EXAMPLE
   .\Add-AadDevicesFromCSV.ps1 -CSVPath .\wufb_merged_report_test.csv -AadGroupName '[Test] Adrian Cojocaru CSV' -ColumnName_DeviceName 'DeviceNameX'
   Add devices by AzureAD Group Name & AzureAD Device Name. The AzureAD group will be created even if a group with the same name already exists.
-  If you wish to add devices to an existing AzureAD group, use -AadGroupObjectId instead.
+  If you wish to add devices to an existing AzureAD group, use -AadGroupObjectId instead
 #>
 
 [CmdletBinding()]
